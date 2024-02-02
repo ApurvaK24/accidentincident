@@ -1,0 +1,58 @@
+:root{
+    --background: #191D88;
+    --text-color: #FFC436;
+}
+
+.header{
+    background-color: var(--background);
+    font-family: Poppins,sans-serif;
+}
+
+.menu-color{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header img{
+    width: 110px;
+    height: 40px;
+}
+
+.header{
+    border-bottom: 1px solid #fff;
+}
+
+.hero-container{
+    background-color: var(--background);
+    width: 100%;
+}
+.hero-text h1 span{
+color: #fff;
+font-size: 50px;
+
+}
+.hero-text p{
+    color: var(--text-color);
+    font-size: 25px;
+    align-items: center;
+}
+.hero-button{
+    background-color: #FFC436;
+    border-radius: 25px;
+    border-width: 3px;
+    border-color: #edece9;
+    
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 250px;
+    width: 220px;
+       
+}
+
+.btn{
+    color: #191D88;
+    font-size: 25px;
+    font-weight: 700;
+   text-align: center;
+}
