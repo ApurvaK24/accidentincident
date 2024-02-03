@@ -66,3 +66,19 @@ font-size: 50px;
 .dd h2{
     color: #191D88;
 }
+
+.hh{
+    color: #FFC436;
+    background-color: #191D88;
+}
+
+.card-text{
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn{
+    border: 2px solid #FFC436;
+}
+.btn:hover{
+    background-color: #191D88;
+}
