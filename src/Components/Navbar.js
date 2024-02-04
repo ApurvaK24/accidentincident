@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from '../images/7.png'
-
+import { Link } from 'react-router-dom';
 const Navbar = () =>{
     return(
         <div class="container-fluid px-5 header sticky-top">
@@ -10,10 +10,10 @@ const Navbar = () =>{
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 menu-color">Home</a></li>
-        <li><a href="#" class="nav-link px-2 menu-color">About </a></li>
-        <li><a href="#" class="nav-link px-2 menu-color">Login</a></li>
-        <li><a href="#" class="nav-link px-2 menu-color">Contact Us</a></li>
+        <li><Link to="/" class="nav-link px-2 menu-color">Home</Link></li>
+        <li><Link to="/about" class="nav-link px-2 menu-color">About </Link></li>
+        <li><Link to="#" class="nav-link px-2 menu-color">Login</Link></li>
+        <li><Link to="#" class="nav-link px-2 menu-color">Contact Us</Link></li>
       </ul>
 
       <div class="col-md-3 text-end">

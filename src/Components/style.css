@@ -27,6 +27,7 @@
 .hero-container{
     background-color: var(--background);
     width: 100%;
+    text-align: center;
 }
 .hero-text h1 span{
 color: #fff;
@@ -85,7 +86,9 @@ font-size: 50px;
 }
 
 .bg-light{
-    background-color: #191D88 !important;}
+    background-color: #191D88 !important;
+    margin-top: 40px;
+}
 
 .d-lg-block{
     color: #fff;
@@ -93,4 +96,29 @@ font-size: 50px;
 
 .ff{
     color: #FFC436;
+}
+
+
+
+.Carousel img{
+    margin: 40px;
+}
+
+.head h2{
+    color: #FFC436;
+    margin-top: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.cc{
+    color:#fff;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 70px;
+    
+}
+
+.cc:hover{
+    box-shadow: 10px 10px 10px #FFC436;
 }
