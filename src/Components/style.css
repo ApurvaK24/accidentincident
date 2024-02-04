@@ -70,6 +70,7 @@ font-size: 50px;
 .hh{
     color: #FFC436;
     background-color: #191D88;
+    margin-bottom: 50px;
 }
 
 .card-text{
@@ -81,4 +82,15 @@ font-size: 50px;
 }
 .btn:hover{
     background-color: #191D88;
+}
+
+.bg-light{
+    background-color: #191D88 !important;}
+
+.d-lg-block{
+    color: #fff;
+}
+
+.ff{
+    color: #FFC436;
 }

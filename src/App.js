@@ -5,9 +5,10 @@ import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Main from './Components/Main';
 import Main1 from './Components/Main1';
-import Footer from './Components/Footer';
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './Components/style.css'
+import Footer from './Components/Footer';
 
 
 function App() {
