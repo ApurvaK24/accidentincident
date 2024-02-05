@@ -12,7 +12,7 @@ const Navbar = () =>{
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><Link to="/" class="nav-link px-2 menu-color">Home</Link></li>
         <li><Link to="/about" class="nav-link px-2 menu-color">About </Link></li>
-        <li><Link to="#" class="nav-link px-2 menu-color">Login</Link></li>
+        <li><Link to="/dash" class="nav-link px-2 menu-color">Login</Link></li>
         <li><Link to="/contact" class="nav-link px-2 menu-color">Contact Us</Link></li>
       </ul>
 

@@ -11,20 +11,18 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './Components/style.css'
 import Footer from './Components/Footer';
 import ContactUs from './Components/ContactUs';
+import MainD from './MainD';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-      {/*<Navbar></Navbar>
-      <Hero></Hero>
-      <Main></Main>
-      <Main1></Main1>
-  <Footer></Footer>*/}
+     
   <Route path="/" element={<Home />}/>
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/dash/*" element={<MainD />} />
       </Routes>
 
     </BrowserRouter>
