@@ -122,3 +122,34 @@ font-size: 50px;
 .cc:hover{
     box-shadow: 10px 10px 10px #FFC436;
 }
+
+
+
+
+
+.contact{
+    margin-left: 30px;
+}
+
+.contact h2{
+    color:#191D88;
+}
+.contact p{
+    font-weight: 600;
+}
+.contact label{
+    font-size: 20px;
+    font-weight: 500;
+}
+.contact input{
+    border: 1px solid ;
+  border-radius: 4px;
+}
+.contact textarea{
+    border: 1px solid ;
+  border-radius: 4px;
+}
+
+.contact a{
+    background-color: #FFC436;
+}

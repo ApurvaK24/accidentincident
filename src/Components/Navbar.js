@@ -13,7 +13,7 @@ const Navbar = () =>{
         <li><Link to="/" class="nav-link px-2 menu-color">Home</Link></li>
         <li><Link to="/about" class="nav-link px-2 menu-color">About </Link></li>
         <li><Link to="#" class="nav-link px-2 menu-color">Login</Link></li>
-        <li><Link to="#" class="nav-link px-2 menu-color">Contact Us</Link></li>
+        <li><Link to="/contact" class="nav-link px-2 menu-color">Contact Us</Link></li>
       </ul>
 
       <div class="col-md-3 text-end">
