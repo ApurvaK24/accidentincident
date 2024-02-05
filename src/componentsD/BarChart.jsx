@@ -79,7 +79,7 @@ export default class Example extends PureComponent {
           <ReferenceLine y={0} stroke="#000" />
           <Brush dataKey="name" height={30} stroke="#8884d8" />
           <Bar dataKey="pv" fill="#FFC436" />
-          <Bar dataKey="uv" fill="#337CCF" />
+          <Bar dataKey="uv" fill="#F0F0F0" />
         </BarChart>
       </ResponsiveContainer>
     );
