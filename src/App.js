@@ -17,8 +17,8 @@ import Topbar from './scenes/global/Topbar';
 import Dashboard from './scenes/dashboard';
 import Bar from './scenes/bar';
 import Pie from './scenes/Pie';
-
-
+import Login from './Components/Login'
+import Registration from './Components/Registration';
 
 
 function App() {
@@ -39,6 +39,8 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<ContactUs />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Registration />} />
 
 
                   <Route path="/dashboard" element={<Dashboard />} />
