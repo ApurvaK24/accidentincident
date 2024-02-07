@@ -19,7 +19,8 @@ import Bar from './scenes/bar';
 import Pie from './scenes/Pie';
 import Login from './Components/Login'
 import Registration from './Components/Registration';
-
+import IncidentRegister from './Components/IncidentRegister';
+import AcidentRegister from './Components/AcidentRegister'
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -41,6 +42,8 @@ function App() {
                   <Route path="/contact" element={<ContactUs />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Registration />} />
+                  <Route path="/incident" element={<IncidentRegister />} />
+                  <Route path="/accident" element={<AcidentRegister />} />
 
 
                   <Route path="/dashboard" element={<Dashboard />} />

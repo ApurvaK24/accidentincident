@@ -256,3 +256,180 @@ font-size: 50px;
   .custom-dropdown {
     color: gray; 
   }
+
+
+
+
+
+
+
+
+
+
+  .incident-report {
+    color: #243052;
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+  }
+  
+  .incident-report h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .incident-report label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .incident-report input,
+  .incident-report select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .incident-report textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .incident-report button {
+    background-color: #191D88;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+  
+  .incident-report .employee-details {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .incident-report .description-of-incident {
+    margin-top: 20px;
+  }
+  
+  .incident-report .incident-causes,
+  .incident-report .follow-up-recommendations {
+    margin-top: 10px;
+   /* margin-right: 10px;*/
+    padding-right: 35px;
+  }
+  
+  .incident-report .additional-notes {
+    margin-top: 10px;
+    padding-right: 35px;
+  }
+  
+  .incident-report .for-official-use-only {
+    text-align: right;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 20px;
+  }
+
+  .incident-report .header {
+    padding: 2px;
+    margin-top: 3px;
+    background-color: #191D88;
+    color: azure;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .incident-report .btn {
+    align-self: center;
+  }
+
+
+
+
+  .Acident-report {
+    color: #191D88;
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+  }
+  
+  .Acident-report h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .Acident-report label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .Acident-report input,
+  .Acident-report select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .Acident-report textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .Acident-report button {
+    background-color: #191D88;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+  
+  .Acident-report .employee-details {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .Acident-report .description-of-Acident {
+    margin-top: 20px;
+  }
+  
+  .Acident-report .Acident-causes,
+  .Acident-report .follow-up-recommendations {
+    margin-top: 10px;
+   /* margin-right: 10px;*/
+    padding-right: 35px;
+  }
+  
+  .Acident-report .additional-notes {
+    margin-top: 10px;
+    padding-right: 35px;
+  }
+  
+  .Acident-report .for-official-use-only {
+    text-align: right;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 20px;
+  }
