@@ -29,7 +29,7 @@ function Login() {
       //SelectedOption: selectedOption,
     };
 
-    const url = 'https://localhost:44353/api/Test/Login';
+    const url = 'https://localhost:44369/api/Test/Login';
     axios
       .post(url, data)
       .then((result) => {
@@ -80,9 +80,9 @@ function Login() {
         </select>
   */}
         <button className="buttonb " onClick={() => handleLogin()}>
-        <Link className='here' to="/accident">
+        
           Login
-          </Link>
+        
         </button>
         <div className="here">Don't have an account? <Link className='here' to="/register">Register here</Link></div>
         
