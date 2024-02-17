@@ -8,7 +8,7 @@ function Login() {
 
   const [employeeId, setEmployeeId] = useState('');
   const [password, setPassword] = useState('');
-  const [selectedOption, setSelectedOption] = useState('hod'); // New state for dropdown
+  const [selectedOption, setSelectedOption] = useState(''); // New state for dropdown
 
   const handleEmployeeIdChange = (value) => {
     setEmployeeId(value);
@@ -18,8 +18,11 @@ function Login() {
     setPassword(value);
   };
 
-  const handleDropdownChange = (value) => {
-    setSelectedOption(value);
+  const handleDropdownChange = (e) => {
+    //setSelectedOption(value);
+    const value = e.target.value;
+  console.log('Selected Option:', value); // Log selected option
+  setSelectedOption(value);
   };
 
   const handleLogin = () => {
@@ -35,21 +38,22 @@ function Login() {
       .then((result) => {
         // Handle successful login (e.g., redirect to another page)
         alert(result.data);
+        console.log('Selected Option:', selectedOption);
         switch (selectedOption) {
           case 'Employee':
             navigate('/dashboard');
             break;
-          case 'Hod':
+          case 'HOD':
             navigate('/bar');
             break;
           case 'Admin':
-            navigate('/pie');
+            navigate('/admin-dashboard');
             break;
           case 'QMD':
             navigate('/qmd-dashboard');
             break;
-          default:
-            navigate('/dashboard');
+          //default:
+           // navigate('/dashboard');
         }
       })
       .catch((error) => {
@@ -89,10 +93,10 @@ function Login() {
           value={selectedOption}
           onChange={(e) => handleDropdownChange(e.target.value)}
         >
-          <option value="Option 1">Employee</option>
-          <option value="Option 2">Hod</option>
-          <option value="Option 3">Admin</option>
-          <option value="Option 3">QMD</option>
+          <option value="Employee">Employee</option>
+          <option value="HOD">Hod</option>
+          <option value="Admin">Admin</option>
+          <option value="QMD">QMD</option>
         </select>
   
         <button className="buttonb" onClick={() => handleLogin()}>
