@@ -15,6 +15,7 @@ const Navbar = () =>{
         <li><Link to="/login" class="nav-link px-2 menu-color">Login</Link></li>
         <li><Link to="/contact" class="nav-link px-2 menu-color">Contact Us</Link></li>
         <li><Link to="/dashboard" class="nav-link px-2 menu-color">Dash</Link></li>
+        
       </ul>
 
       <div class="col-md-3 text-end">

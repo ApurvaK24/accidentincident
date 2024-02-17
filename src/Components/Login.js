@@ -1,11 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import axios from 'axios';
-
+import { Link, useNavigate } from 'react-router-dom'
+import Navbar from "./Navbar";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [employeeId, setEmployeeId] = useState('');
   const [password, setPassword] = useState('');
-  const [selectedOption, setSelectedOption] = useState('Employee'); // New state for dropdown
+  const [selectedOption, setSelectedOption] = useState('hod'); // New state for dropdown
 
   const handleEmployeeIdChange = (value) => {
     setEmployeeId(value);
@@ -32,6 +35,22 @@ function Login() {
       .then((result) => {
         // Handle successful login (e.g., redirect to another page)
         alert(result.data);
+        switch (selectedOption) {
+          case 'Employee':
+            navigate('/dashboard');
+            break;
+          case 'Hod':
+            navigate('/bar');
+            break;
+          case 'Admin':
+            navigate('/pie');
+            break;
+          case 'QMD':
+            navigate('/qmd-dashboard');
+            break;
+          default:
+            navigate('/dashboard');
+        }
       })
       .catch((error) => {
         // Handle login error (e.g., display an error message)
@@ -41,6 +60,7 @@ function Login() {
 
   return (
     <Fragment>
+      <Navbar />
       <div className="container ll">
         <h2 className="heading h">Login</h2>
 
