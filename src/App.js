@@ -21,6 +21,7 @@ import Login from './Components/Login'
 import Registration from './Components/Registration';
 import IncidentRegister from './Components/IncidentRegister';
 import AcidentRegister from './Components/AcidentRegister'
+import Goto from './Components/Goto';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -44,7 +45,7 @@ function App() {
                   <Route path="/register" element={<Registration />} />
                   <Route path="/incident" element={<IncidentRegister />} />
                   <Route path="/accident" element={<AcidentRegister />} />
-
+                  <Route path="/goto" element={<Goto />} />
 
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/bar" element={<Bar />} />

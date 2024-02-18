@@ -433,3 +433,20 @@ font-size: 50px;
     color: #ccc;
     margin-top: 20px;
   }
+
+  .animation{
+    
+    background-color: #191D88;
+    
+    /* Add AOS classes */
+  opacity: 0; /* Initial opacity for fade-in animation */
+  transition: opacity 2s ease; /* Transition property for fade-in animation */
+  }
+
+  .animation.aos-animate {
+    opacity: 3; /* Final opacity for fade-in animation */
+  }
+
+  .animation card{
+    height: 300px !important;
+  }
