@@ -64,10 +64,11 @@ function Registration() {
           id="txtName"
           placeholder="Enter Your Name"
           className="input i"
+          required
           onChange={(e) => handleNameChange(e.target.value)}
         />
 
-        <label className="label l">Employee Id :</label>
+        <label className="label l" required>Employee Id :</label>
         <input
           type="text"
           id="txtEmployeeId"
@@ -76,7 +77,7 @@ function Registration() {
           onChange={(e) => handleEmployeeIdChange(e.target.value)}
         />
 
-        <label className="label l">Password :</label>
+        <label className="label l" required>Password :</label>
         <input
           type="password"
           id="txtPassword"
@@ -85,7 +86,7 @@ function Registration() {
           onChange={(e) => handlePasswordChange(e.target.value)}
         />
 
-        <label className="label l">Re-enter Password :</label>
+        <label className="label l" required>Re-enter Password :</label>
         <input
           type="password"
           id="re-enterPassword"
@@ -94,18 +95,20 @@ function Registration() {
           onChange={(e) => handleReenteredPasswordChange(e.target.value)}
         />
 
-        <label className="label l">Select Your Role :</label>
+        <label className="label l" required>Select Your Role :</label>
         <select
-          id="dropdown"
+          id="dropdown"          
           className="input custom-dropdown"
           value={selectedOption}
           onChange={(e) => handleDropdownChange(e.target.value)}
+          //defaultValue="Select"
         >
           
-          <option value="Option 1">Employee</option>
-          <option value="Option 2">Hod</option>
-          <option value="Option 3">Admin</option>
-          <option value="Option 3">QMD</option>
+         <option disabled selected value="">Select your choice</option>  
+          <option value="Employee">Employee</option>
+          <option value="HOD">Hod</option>
+          <option value="Admin">Admin</option>
+          <option value="QMD">QMD</option>
          
         </select>
 

@@ -19,6 +19,7 @@ function Login() {
 
   const handleDropdownChange = (value) => {
     setSelectedOption(value);
+   // console.log('Selected choice ', value);
   };
 
   const handleLogin = () => {
@@ -43,7 +44,7 @@ function Login() {
             navigate('/bar');
             break;
           case 'Admin':
-            navigate('/admin-dashboard');
+            navigate('/pie');
             break;
           case 'QMD':
             navigate('/qmd-dashboard');
@@ -64,7 +65,7 @@ function Login() {
       <div className="container ll">
         <h2 className="heading h">Login</h2>
 
-        <label className="label l">Employee Id</label>
+        <label className="label l" required>Employee Id</label>
         <input
           type="text"
           id="txtEmployeeId"
@@ -73,7 +74,7 @@ function Login() {
           onChange={(e) => handleEmployeeIdChange(e.target.value)}
         />
 
-        <label className="label l">Password</label>
+        <label className="label l" required>Password</label>
         <input
           type="password"
           id="txtPassword"
@@ -82,14 +83,15 @@ function Login() {
           onChange={(e) => handlePasswordChange(e.target.value)}
         />
 
-        <label className="label">Select Your Role</label>
+        <label className="label" required>Select Your Role</label>
         <select
           id="dropdown"
           className="input"
           value={selectedOption}
           onChange={(e) => handleDropdownChange(e.target.value)}
         >
-          <option value="Employee">Employee</option>
+         <option disabled selected value="">Select an option</option>  
+        <option value="Employee">Employee</option>
           <option value="HOD">HOD</option>
           <option value="QMD">QMD</option>
           <option value="Admin">Admin</option>
