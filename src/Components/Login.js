@@ -75,7 +75,7 @@ function Login() {
           switch (selectedOption.toUpperCase()) {
             case 'EMPLOYEE':
               // Redirect for Employee role
-              navigate('/goto');
+              navigate('/emp');
               break;
             case 'HOD':
               // Redirect for HOD role
