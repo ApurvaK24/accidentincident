@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
@@ -19,29 +19,32 @@ import Footer from '../../Components/Footer';
 
 
 const Dashboard = () => {
-  {/*const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-const [colorMode] = useMode();*/}
-
-const theme = useTheme();
+  const theme = useTheme();
   const [colorMode] = useMode();
+ const colors = tokens(theme.palette.mode);
 
-  console.log("Theme:", theme);
-  console.log("Color Mode:", colorMode);
+ 
+ const [incidentCount, setIncidentCount] = useState(null); // State to store the incident count
 
-  if (!theme || !colorMode) {
-    console.error("Theme or colorMode is not available");
-    return null;
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://localhost:44369/api/Incident/GetIncidentCount');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json();
+        setIncidentCount(jsonData); // Set the incident count in state
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-  const colors = tokens(theme.palette.mode);
+    fetchData();
 
-  console.log("Colors:", colors);
+  }, []);
 
-  if (!colors) {
-    console.error("Colors are not available");
-    return null;
-  }
+  
 
   return (
   
@@ -84,7 +87,7 @@ const theme = useTheme();
           justifyContent="center"
         >
           <StatBox
-            title="12,361"
+            title={incidentCount !== null ? incidentCount : "-"}
             subtitle="INCIDENTS"
             progress="0.75"
             increase="+14%"
