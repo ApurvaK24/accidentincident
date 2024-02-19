@@ -14,15 +14,15 @@ const Navbar = () =>{
         <li><Link to="/about" class="nav-link px-2 menu-color">About </Link></li>
         <li><Link to="/login" class="nav-link px-2 menu-color">Login</Link></li>
         <li><Link to="/contact" class="nav-link px-2 menu-color">Contact Us</Link></li>
-        <li><Link to="/dashboard" class="nav-link px-2 menu-color">Dash</Link></li>
-        <li><Link to="/goto" class="nav-link px-2 menu-color">goto</Link></li>
+        <li><Link to="/dashboard" class="nav-link px-2 menu-color">Dashboard</Link></li>
+        
 
       </ul>
 
-      <div class="col-md-3 text-end">
+      {/*<div class="col-md-3 text-end">
         <i className="bi bi-search fs-3 me-4 text-success"></i>
         <i className="bi bi-vehicle fs-3"></i>
-      </div>
+    </div>*/}
     </header>
   </div>
     )

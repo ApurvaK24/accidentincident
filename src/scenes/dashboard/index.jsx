@@ -3,13 +3,14 @@ import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../componentsD/Header";
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { ColorModeContext, useMode } from '../../theme';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+
 
 import BarChart from "../../componentsD/BarChart";
 import StatBox from "../../componentsD/StatBox";
@@ -53,13 +54,13 @@ const Dashboard = () => {
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="AdminBoard ARAI" subtitle="Displays total users and accidents/incidents" />
+        <Header title="Admin Dashboard ARAI" subtitle="Monitor user engagement and safety with real-time data on total users, incidents and accidents." />
 
         <Box>
-          <Button
+          {/*<Button
             sx={{
-              backgroundColor: colors.yellow[100],
-              color: colors.grey[500],
+              backgroundColor: colors.grey[500],
+              color: colors.yellow[100],
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
@@ -67,9 +68,9 @@ const Dashboard = () => {
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
             Download Reports
-          </Button>
+          </Button>*/}
         </Box>
-      </Box>
+          </Box>
 
       {/* GRID & CHARTS */}
       <Box
@@ -88,11 +89,11 @@ const Dashboard = () => {
         >
           <StatBox
             title={incidentCount !== null ? incidentCount : "-"}
-            subtitle="INCIDENTS"
+            subtitle="Incidents"
             progress="0.75"
-            increase="+14%"
+            
             icon={
-              <EmailIcon
+              <AssignmentIcon
                 sx={{ color: colors.yellow[100], fontSize: "26px" }}
               />
             }
@@ -107,11 +108,11 @@ const Dashboard = () => {
         >
           <StatBox
             title="431,225"
-            subtitle="ACCIDENTS"
+            subtitle="Accidents"
             progress="0.50"
-            increase="+21%"
+           
             icon={
-              <PointOfSaleIcon
+              <AssignmentIndIcon
                 sx={{ color: colors.yellow[100], fontSize: "26px" }}
               />
             }
@@ -126,9 +127,9 @@ const Dashboard = () => {
         >
           <StatBox
             title="32,441"
-            subtitle="USERS"
+            subtitle="Employees"
             progress="0.30"
-            increase="+5%"
+            
             icon={
               <PersonAddIcon
                 sx={{ color: colors.yellow[100], fontSize: "26px" }}
@@ -147,9 +148,9 @@ const Dashboard = () => {
             title="1,325,134"
             subtitle="HODs"
             progress="0.80"
-            increase="+43%"
+            
             icon={
-              <TrafficIcon
+              <AccountBoxIcon
                 sx={{ color: colors.yellow[100], fontSize: "26px" }}
               />
             }
@@ -172,18 +173,18 @@ const Dashboard = () => {
             <Box>
               <Typography
                 variant="h5"
-                fontWeight="600"
-                color={colors.grey[100]}
+                fontWeight="300"
+                color={colors.yellow[100]}
               >
-                Statistics
+                Monthly Statistics
               </Typography>
-              <Typography
+              {/*<Typography
                 variant="h3"
                 fontWeight="bold"
                 color={colors.yellow[100]}
               >
                 9,342.32
-              </Typography>
+          </Typography>*/}
             </Box>
             <Box>
               <IconButton>
@@ -197,7 +198,9 @@ const Dashboard = () => {
             <BarChart isDashboard={true} />
           </Box>
         </Box>
-        <Box
+
+
+        {/*<Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.blueAccent[500]}
@@ -246,7 +249,7 @@ const Dashboard = () => {
               </Box>
             </Box>
           ))}
-        </Box>
+        </Box>*/}
 
         {/* ROW 3 */}
         <Box
@@ -255,8 +258,8 @@ const Dashboard = () => {
           backgroundColor={colors.blueAccent[500]}
           p="30px"
         >
-          <Typography variant="h5" fontWeight="600">
-            Results
+          <Typography variant="h5" fontWeight="300" color={colors.yellow[100]}>
+          Proportion Pie
           </Typography>
           <Box
             display="flex"
@@ -270,9 +273,9 @@ const Dashboard = () => {
               color={colors.yellow[100]}
               sx={{ mt: "15px" }}
             >
-              sdfdg efsfdg gdfghdtbht
+              Incidents
             </Typography>
-            <Typography>Includes dfsf nfkfngk ggbfgh</Typography>
+            <Typography>Accidents</Typography>
           </Box>
         </Box>
        
@@ -281,7 +284,7 @@ const Dashboard = () => {
          
         </Box>
       </Box>
-      <Footer />
+     
       </div>
   );
 };
