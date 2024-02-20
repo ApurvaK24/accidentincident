@@ -1,47 +1,39 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Footer() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-3 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+          <h6>Get connected with us on social networks:</h6>
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
-        </div>
+        <FacebookIcon style={{ color: 'white' , marginLeft: '15px'}} />
+        <InstagramIcon style={{ color: 'white', marginLeft: '15px'}} />
+        <TwitterIcon style={{ color: 'white', marginLeft: '15px' }} />
+        <WhatsAppIcon style={{ color: 'white', marginLeft: '15px' }} />
+            </div>
       </section>
 
       <section className='ff'>
-        <MDBContainer className='text-center text-md-start mt-5'>
+        <MDBContainer className='text-center text-md-start mt-4'>
           <MDBRow className='mt-2'>
-            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-3'>
+            <MDBCol md="3" lg="3" xl="4" className='mx-auto mb-3'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
+                Automotive Research Association of India
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+              ARAI has been playing crucial roles assuring safe, less polluting, more efficient and reliable vehicles. 
+              Working in harmony and confidence with its Members, Customers and Government it provides services and expertise
+               in the areas of Engineering Services,
+               Certification & Standardisation, Research & Develop, Technology Development and Knowledge Initiatives.
               </p>
             </MDBCol>
 
@@ -49,22 +41,22 @@ export default function Footer() {
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  Home
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  React
+                  About
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
+                  Login
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Laravel
+                  Contact Us
                 </a>
               </p>
             </MDBCol>
@@ -73,17 +65,17 @@ export default function Footer() {
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Pricing
+                  Report
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Settings
+                  Incident
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Orders
+                  Accident
                 </a>
               </p>
               <p>
@@ -97,7 +89,7 @@ export default function Footer() {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+               ARAI, Paud Road, Kothrud, Pune.
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
@@ -115,9 +107,9 @@ export default function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)', color: '#FFC436' }}>
-        © 2021 Copyright:
+        © 2024 Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          ApurvaIsha.com
         </a>
       </div>
     </MDBFooter>

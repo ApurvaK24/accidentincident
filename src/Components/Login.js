@@ -109,7 +109,7 @@ function Login() {
         <h2 className="heading h">Login</h2>
 
         <label className="label l">
-          Employee Id<span className="required">*</span>:
+          Employee ID<span className="required">*</span> :
         </label>
         <input
           type="text"
@@ -121,7 +121,7 @@ function Login() {
         <span className="error">{errorMessages.employeeId}</span>
 
         <label className="label l">
-          Password<span className="required">*</span>:
+          Password<span className="required">*</span> :
         </label>
         <input
           type="password"
@@ -132,12 +132,12 @@ function Login() {
         />
         <span className="error">{errorMessages.password}</span>
 
-        <label className="label">
+        <label className="label l">
           Select Your Role<span className="required">*</span>:
         </label>
         <select
           id="dropdown"
-          className="input"
+          className="input i"
           value={selectedOption}
           onChange={(e) => handleDropdownChange(e.target.value)}
         >

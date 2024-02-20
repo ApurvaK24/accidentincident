@@ -10,43 +10,59 @@ import { ColorModeContext, useMode } from '../../theme';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
-
-
 import BarChart from "../../componentsD/BarChart";
 import StatBox from "../../componentsD/StatBox";
 import ProgressCircle from "../../componentsD/ProgressCircle";
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
-
 const Dashboard = () => {
-  const theme = useTheme();
-  const [colorMode] = useMode();
- const colors = tokens(theme.palette.mode);
-
+const theme = useTheme();
+const [colorMode] = useMode();
+const colors = tokens(theme.palette.mode);
  
- const [incidentCount, setIncidentCount] = useState(null); // State to store the incident count
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://localhost:44369/api/Incident/GetIncidentCount');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const jsonData = await response.json();
-        setIncidentCount(jsonData); // Set the incident count in state
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-
-  }, []);
-
+const [incidentCount, setIncidentCount] = useState(null); // State to store the incident count
+const [accidentCount, setAccidentCount] = useState(null);
+const [employeeCount, setEmployeeCount] = useState(null);
+const [hodCount, setHODCount] = useState(null);
   
+ useEffect(() => {
+  const fetchData = async () => {
+    //GetIncidentCount
+    try {
+      const respIncidentCount = await fetch('https://localhost:44369/api/Incident/GetIncidentCount');
+      if (!respIncidentCount.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await respIncidentCount.json();
+      console.log('Incident count data:', jsonData); // Check the fetched incident count data
+      setIncidentCount(jsonData); // Set the incident count in state
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setIncidentCount(null); // Reset incident count to null in case of an error      
+    }
+    
+    //GetAccidentCount
+    try {
+      const respAccidentCount = await fetch('https://localhost:44369/api/Accident/GetAccidentCount');
+      if (!respAccidentCount.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await respAccidentCount.json();
+      console.log('Accident count data:', jsonData); // Check the fetched Accident count data
+      setAccidentCount(jsonData); // Set the Accident count in state
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setAccidentCount(null); // Reset Accident count to null in case of an error      
+    }
+    //Add here GetEmployeesCount
 
+    //Add here GetHODSCount
+
+  };
+  fetchData();
+}, []);
+  
   return (
   
   <div>
@@ -107,7 +123,7 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="431,225"
+            title= {accidentCount !== null ? accidentCount : "-"}
             subtitle="Accidents"
             progress="0.50"
            

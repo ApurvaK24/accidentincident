@@ -39,37 +39,147 @@ font-size: 50px;
     font-size: 25px;
     align-items: center;
 }
+
 .hero-button{
-    background-color: #FFC436;
-    border-radius: 25px;
-    border-width: 3px;
-    border-color: #edece9;
-    
-    height: 70px;
-    margin-top: 10px;
-    margin-left: 250px;
-    width: 220px;
-       
+   height: 70px;
+  margin-top: 10px;
+  margin-left: 250px;
+  width: 220px;
+     
 }
 
-.hero-button:hover{
-    color: #fff !important;
-}
+
 .btn{
-    color: #191D88;
-    font-size: 25px;
-    font-weight: 700;
-   text-align: center;
-   margin-left: 25px;
-   padding: auto;
+  color: #191D88;
+  font-size: 25px;
+  font-weight: 700;
+ text-align: center;
+ margin-left: 25px;
+ padding: auto;
+
+ background-color: #FFC436;
+ border-color: #edece9;
 }
 
-.dd h2{
+
+.dd1 h2{
+  margin-top: 30px;
     color: #191D88;
+    font-weight: 600;
+    font-family: Poppins,sans-serif;
 }
 .dd{
     color: #191D88;
+    font-family: Poppins,sans-serif;
+    font-size: 16px;
+    
 }
+
+.dd1 h3{
+  font-weight: 600;
+}
+
+.dd1 .col{
+  
+  padding-left: 60px !important;
+  padding-right: 50px !important;
+  padding-top:50px !important;
+}
+
+.dd1 .team_img
+{
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 10px;
+}
+
+.dd1 .team_img img
+{
+  height: 200px;
+  width: 250px;
+}
+
+.dd1 .img {
+  border-radius: 50%;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  border: 8px solid #191D88;
+  padding: 0px;
+}
+
+.dd1 .card-title h2{
+  font-weight: 700 !important;
+ 
+}
+.dd1 .g-4 row row-cols-md-3 row-cols-1{
+  align-items: center !important;
+
+}
+/*.btn{
+  border: 2px solid black;
+background-color: #560556;
+color: #fff;
+padding: 14px 28px;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+width: 50%;
+}
+.btn:hover{
+background-color: violet;
+border: 2px solid #560556;
+}*/
+
+.dd1 .card{
+  background-color: #FFC436 !important;
+  width: 400px;
+  height: 400px;
+  font-weight: 600;
+  justify-content: flex-end !important;
+  margin-top: 20px !important;
+  margin-bottom: 50px;
+  color: #191D88;
+  
+  
+  /*border:5px solid #560556;*/
+  /*border-radius: 28px;*/
+}
+.dd1 .a:hover{
+  background-color: #191D88;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hh{
     color: #FFC436;
     background-color: #191D88;
@@ -84,7 +194,8 @@ font-size: 50px;
     border: 2px solid #FFC436;
 }
 .btn:hover{
-    background-color: #191D88;
+    background-color: #fff;
+    color: #191D88;
 }
 
 .bg-light{
@@ -98,6 +209,7 @@ font-size: 50px;
 
 .ff{
     color: #FFC436;
+    font-family: 400;
 }
 
 
@@ -180,7 +292,7 @@ font-size: 50px;
   }
 
   .h {
-    color: white;
+    color: #fcdf03;
     background-color: #191D88;
     font-size: 35px;
     background: transparent;
@@ -197,6 +309,7 @@ font-size: 50px;
     color: white;
     text-align: left;
     font-size: 20px;
+    font-weight: 500;
   }
 
   .i{

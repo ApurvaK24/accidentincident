@@ -130,7 +130,7 @@ const Emp = () => {
           {/* Add other boxes as needed */}
         </Box>
       </Box>
-      <Footer />
+      
       
     </div>
   );
