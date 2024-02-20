@@ -24,7 +24,7 @@ const colors = tokens(theme.palette.mode);
 const [incidentCount, setIncidentCount] = useState(null); // State to store the incident count
 const [accidentCount, setAccidentCount] = useState(null);
 const [employeeCount, setEmployeeCount] = useState(null);
-const [hodCount, setHODCount] = useState(null);
+const [hodCount, sethodCount] = useState(null);
   
  useEffect(() => {
   const fetchData = async () => {
@@ -58,6 +58,18 @@ const [hodCount, setHODCount] = useState(null);
     //Add here GetEmployeesCount
 
     //Add here GetHODSCount
+    try {
+      const resphodCount = await fetch('https://localhost:44369/api/Test/GetHODCount');
+      if (!resphodCount.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await resphodCount.json();
+      console.log('HOD count data:', jsonData); // Check the fetched Accident count data
+      sethodCount(jsonData); // Set the Accident count in state
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      sethodCount(null); // Reset Accident count to null in case of an error      
+    }
 
   };
   fetchData();
@@ -161,7 +173,7 @@ const [hodCount, setHODCount] = useState(null);
           justifyContent="center"
         >
           <StatBox
-            title="1,325,134"
+            title={hodCount !== null ? hodCount : "-"}
             subtitle="HODs"
             progress="0.80"
             
