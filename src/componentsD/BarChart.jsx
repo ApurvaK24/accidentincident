@@ -2,6 +2,82 @@ import React, { PureComponent } from 'react';
 import {
   BarChart,
   Bar,
+  ResponsiveContainer,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from 'recharts';
+
+class Example extends PureComponent {
+  state = {
+    accidentData: [],
+    isLoading: true
+  };
+
+  componentDidMount() {
+    // Fetch accident data from backend API
+    fetch('https://localhost:44369/api/Accident/GetMonthlyAccidentCounts')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          accidentData: data,
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching accident data:', error);
+        this.setState({
+          isLoading: false
+        });
+      });
+  }
+
+  render() {
+    const { accidentData, isLoading } = this.state;
+
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+
+    return (
+      <ResponsiveContainer width="100%" height={250}>
+        <BarChart
+          data={accidentData}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="MonthName" tick={{ fill: '#fff' }} />
+          <YAxis tick={{ fill: '#fff' }} />
+          <Tooltip />
+          <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
+          <Bar dataKey="AccidentCount" name="Accidents" fill="#FFC436" />
+          <Bar dataKey="IncidentCount" name="Incidents" fill="#F0F0F0" />
+        </BarChart>
+      </ResponsiveContainer>
+    );
+  }
+}
+
+export default Example;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { PureComponent } from 'react';
+import {
+  BarChart,
+  Bar,
   Brush,
   ReferenceLine,
   XAxis,
@@ -58,4 +134,5 @@ export default class Example extends PureComponent {
       </ResponsiveContainer>
     );
   }
-}
+}*/
+

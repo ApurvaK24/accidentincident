@@ -25,6 +25,7 @@ const [incidentCount, setIncidentCount] = useState(null); // State to store the 
 const [accidentCount, setAccidentCount] = useState(null);
 const [employeeCount, setEmployeeCount] = useState(null);
 const [hodCount, sethodCount] = useState(null);
+const [empCount, setempCount] = useState(null);
   
  useEffect(() => {
   const fetchData = async () => {
@@ -56,6 +57,22 @@ const [hodCount, sethodCount] = useState(null);
       setAccidentCount(null); // Reset Accident count to null in case of an error      
     }
     //Add here GetEmployeesCount
+    try {
+      const respEmpCount = await fetch('https://localhost:44369/api/Test/GetEmpCount');
+      if (!respEmpCount.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await respEmpCount.json();
+      console.log('HOD count data:', jsonData); // Check the fetched Accident count data
+      setempCount(jsonData); // Set the Accident count in state
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setempCount(null); // Reset Accident count to null in case of an error      
+    }
+
+
+
+
 
     //Add here GetHODSCount
     try {
@@ -154,7 +171,7 @@ const [hodCount, sethodCount] = useState(null);
           justifyContent="center"
         >
           <StatBox
-            title="32,441"
+            title= {empCount !== null ? empCount : "-"}
             subtitle="Employees"
             progress="0.30"
             
