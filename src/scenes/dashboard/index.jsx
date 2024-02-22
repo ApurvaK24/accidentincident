@@ -242,7 +242,9 @@ const [empCount, setempCount] = useState(null);
           <Box height="230px" m="-20px 0 0 0">
             <BarChart isDashboard={true} />
           </Box>
+          
         </Box>
+
 
 
         {/*<Box

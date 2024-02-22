@@ -12,6 +12,81 @@ import {
 
 class Example extends PureComponent {
   state = {
+    data: [],
+    isLoading: true
+  };
+
+  componentDidMount() {
+    // Fetch data from the new API
+    fetch('https://localhost:44369/api/CountDetails')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          data: data,
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        this.setState({
+          isLoading: false
+        });
+      });
+  }
+
+  render() {
+    const { data, isLoading } = this.state;
+
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+
+    return (
+      <ResponsiveContainer width="100%" height={250}>
+        <BarChart
+          data={data}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="MonthName" tick={{ fill: '#fff' }} />
+          <YAxis tick={{ fill: '#fff' }} />
+          <Tooltip />
+          <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
+          <Bar dataKey="AccidentCount" name="Accidents" fill="#FFC436" />
+          <Bar dataKey="IncidentCount" name="Incidents" fill="#F0F0F0" />
+        </BarChart>
+      </ResponsiveContainer>
+    );
+  }
+}
+
+export default Example;
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { PureComponent } from 'react';
+import {
+  BarChart,
+  Bar,
+  ResponsiveContainer,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from 'recharts';
+
+class Example extends PureComponent {
+  state = {
     accidentData: [],
     isLoading: true
   };
@@ -60,7 +135,7 @@ class Example extends PureComponent {
   }
 }
 
-export default Example;
+export default Example;*/
 
 
 
