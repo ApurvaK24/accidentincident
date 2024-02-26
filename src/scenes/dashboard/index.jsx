@@ -96,6 +96,7 @@ const [empCount, setempCount] = useState(null);
   
   <div>
 <Navbar />
+<br></br>
     <Box m="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">

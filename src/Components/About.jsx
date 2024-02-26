@@ -1,9 +1,9 @@
 import React from "react";
 import {useState} from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from '../images/1.png'
-import img2 from '../images/7.png'
-import img3 from '../images/6.png'
+import img1 from '../images/huge.png'
+import img2 from '../images/huge1.png'
+import img3 from '../images/8.png'
 import img4 from '../images/3.png'
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -62,7 +62,7 @@ function About(){
     </div>
   </div>
 </div>
-<Footer />
+
 
 
 
