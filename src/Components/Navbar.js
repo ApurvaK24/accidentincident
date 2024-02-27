@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../images/7.png'
+import Logo from '../images/Logo.jpg'
 import { Link } from 'react-router-dom';
 const Navbar = () =>{
     return(

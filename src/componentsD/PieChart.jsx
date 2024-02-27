@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Group A', value: 200 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
+  { name: 'Accident', value: 200 },
+  { name: 'Incident', value: 300 },
+  { name: 'Employee', value: 300 },
+  { name: 'HOD', value: 200 },
 ];
 
 const renderActiveShape = (props) => {
@@ -79,7 +79,7 @@ export default class Example extends PureComponent {
             cy="50%"
             innerRadius={60}
             outerRadius={200}
-            fill="#FFC436"
+            fill="#191D88"
             dataKey="value"
             onMouseEnter={this.onPieEnter}
           />

@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../images/8.jpg"
-
+import { Link } from "react-router-dom";
 const Hero = () => {
     return (
         <div class="container-fluid col-xxl-8 px-4 py-7 hero-container">
@@ -22,8 +22,8 @@ const Hero = () => {
                     Empowering Safety Through Documentation. Incident Aware, Future Prepared</p></div>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start hero-button">
-                        <button type="button" class="btn btn-warining btn-lg px-4 me-md-2 rounded-0">
-                            REGISTER</button>
+                        <Link type="button" class="btn btn-warining btn-lg px-4 me-md-2 rounded-0" to="/register">
+                            REGISTER</Link>
                        
                     </div>
                 </div>

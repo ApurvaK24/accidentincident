@@ -12,7 +12,7 @@ const ContactUs = () => {
 
             <br></br>
             
-            <div class="row row-cols-9 row-cols-sm-12 row-cols-md-9 g-9 gg">
+            <div class="row row-cols-7 row-cols-sm-10 row-cols-md-7 g-7 gg">
                 <div class="col">
                     <div class="card shadow-sm">
 
@@ -90,15 +90,15 @@ const ContactUs = () => {
                                     <ul class="list-unstyled mb-0">
                                         <li>{/*<i class="fas fa-map-marker-alt fa-2x"></i>*/}
                                         <i class="fa-solid fa-location-dot"></i>
-                                            <p>San Francisco, CA 94126, USA</p>
+                                            <p>ARAI, Kothrud, Pune.</p>
                                         </li>
 
                                         <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                                            <p>+ 01 234 567 89</p>
+                                            <p>+ 91 11234 567 89</p>
                                         </li>
 
                                         <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                            <p>contact@mdbootstrap.com</p>
+                                            <p>contact@arai.com</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -126,7 +126,7 @@ const ContactUs = () => {
         
        
         </div>
-          <Footer />
+         
           </div>
     )
 }
